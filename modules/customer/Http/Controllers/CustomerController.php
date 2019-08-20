@@ -11,7 +11,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        dd('Customers Controller!!');
+        dd('Customers Controller!!', config('menu.customer'));
     }
 
 }

@@ -17,7 +17,7 @@ class CustomerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->registerConfig();
     }
     /**
      * Bootstrap services.
@@ -28,6 +28,17 @@ class CustomerServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ . '/../Http/routes.php');
 
+    }
+    /**
+     * Register package config.
+     *
+     * @return void
+     */
+    protected function registerConfig()
+    {
+        $this->mergeConfigFrom(
+            dirname(__DIR__) . '/Config/menu.php', 'menu.customer'
+        );
     }
 
 }
