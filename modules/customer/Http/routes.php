@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Customer Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -11,3 +11,4 @@
 |
 */
 
+Route::get('/', '\Customer\Http\Controllers\CustomerController@index');
