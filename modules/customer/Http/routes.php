@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', '\Customer\Http\Controllers\CustomerController@index');
+
+Route::namespace('Customer\Http\Controllers')->group(function(){
+
+    Route::get('/', 'CustomerController@index');
+});
