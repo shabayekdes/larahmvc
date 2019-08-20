@@ -11,7 +11,8 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        dd('Customers Controller!!', config('menu.customer'));
+        // dd('Customers Controller!!', config('menu.customer'));
+        return view('customer::welcome');
     }
 
 }
